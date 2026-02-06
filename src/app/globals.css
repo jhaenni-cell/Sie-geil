@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #1A1A2E;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl;
+  }
+  .dashboard-placeholder {
+    @apply border-2 border-dashed border-brainhance-blue/40 bg-brainhance-gray/50 rounded-xl flex items-center justify-center min-h-[200px] text-brainhance-blue/60 text-sm font-medium;
+  }
+  .image-placeholder {
+    @apply bg-gray-100 rounded-xl flex flex-col items-center justify-center text-gray-400 gap-2;
+  }
+  .portrait-placeholder {
+    @apply bg-gray-100 rounded-full flex items-center justify-center text-gray-400;
+  }
+}
